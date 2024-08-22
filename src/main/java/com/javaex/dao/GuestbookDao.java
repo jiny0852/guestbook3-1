@@ -143,7 +143,23 @@ public class GuestbookDao {
 		
 		System.out.println("dao.getPersonOne()");
 		
+		/*
+		
+		Map<String, Object> personMap = sqlSession.selectOne("guestbook.selectOne", no);
+		
+		System.out.println("----------------");
+		System.out.println(personMap);
+		System.out.println(personMap.get("name"));
+		System.out.println("----------------");
+		*/
+		
+		
+		
 		PersonVo personVo = sqlSession.selectOne("guestbook.selectOne", no);
+		
+		System.out.println("----------------");
+		System.out.println(personVo);
+		System.out.println("----------------");
 		
 		/*
 
@@ -200,7 +216,7 @@ public class GuestbookDao {
 		
 		*/
 
-		return personVo;
+		return null;//return personVo;
 	}
 	
 	
